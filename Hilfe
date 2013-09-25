@@ -1,0 +1,17 @@
+YOUBOT_ARM_JOINT_GEAR_RATIOS[YOUBOT_NR_OF_JOINTS] = {156, 156, 100, 71, 71};
+
+YOUBOT_ARM_JOINT_TORQUE_CONSTANTS[YOUBOT_NR_OF_JOINTS] = {0.0335, 0.0335, 0.0335, 0.051, 0.049}; [Nm/A]
+
+ m_joint_state.effort[i] = m_in_motor[i]->current * YOUBOT_ARM_JOINT_TORQUE_CONSTANTS[i]*YOUBOT_ARM_JOINT_GEAR_RATIOS[i]/1000
+
+/* Niko */
+
+/* Niko */
+
+Topics:
+/arm_1/youbot_dynamics/m_joint_efforts/torques[2]/value
+/arm_1/joint_states/effort[2]
+
+/arm_1/youbot_kinematics/m_ee_pose/position/x
+/arm_1/youbot_kinematics/m_ee_pose/orientation/x
+ 

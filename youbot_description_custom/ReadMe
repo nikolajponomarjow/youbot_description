@@ -1,0 +1,2 @@
+Angepasste Beschreibung des Youbots in URDF aus Orocos für ROS.
+Zusätzliche Joints base_x_joint und base_y_joint sind prismatic, daher dynamics und limit müssen einkommentiert werden.

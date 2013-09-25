@@ -1,0 +1,23 @@
+Angepasste Beschreibung des Youbots "youbot_orocos.urdf" in URDF aus Orocos für ROS.
+
+1. base_x_joint und base_y_joint angepasst
+2. Orientierung der Joints für Home-Stellung angepasst
+
+Verwendung der "robot_description" direkt aus der URDF-Datei
+
+prop_urdf_model = ros::package::getPath("youbot_kin_dyn");
+prop_urdf_model.append("/src/youbot_orocos.urdf");
+KDL::Tree my_tree;
+if (!kdl_parser::treeFromFile(prop_urdf_model, my_tree)) {
+   ROS_ERROR("Failed to construct kdl tree");
+   return false;
+}
+
+statt von Parameterserver
+
+n.getParam("robot_description", prop_urdf_model);
+KDL::Tree my_tree;
+if (!kdl_parser::treeFromString(prop_urdf_model, my_tree)) {
+   ROS_ERROR("Failed to construct kdl tree");
+   return false;
+}
